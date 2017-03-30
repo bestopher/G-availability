@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.senegal.nagnekoseytoo.gabavailability">
+
+    <!-- on crée une permission pour notre application -->
+    <permission android:name="com.senegal.nagnekoseytoo.gabavailability.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    <!-- on ajoute notre permission à la liste de permissions requises par l'API -->
+    <uses-permission android:name="com.senegal.nagnekoseytoo.gabavailability.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+    <!-- la librairie Maps V2 nécessite openGL pour son bon fonctionnement -->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/gap1"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAIAeDKD-x5vLIKbZZqFRlo83MLESGoATQ" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--<meta-data android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/api_debug_key"/>
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />-->
+        <activity android:name=".Activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.AccueilActivity" />
+        <activity android:name=".Activities.OffresActivity" />
+        <activity android:name=".Activities.AproposActivity" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".Activities.GabAvailabilityActivity" />
+        <activity android:name=".Activities.AutreActivity" />
+        <activity android:name=".Activities.MapActivity"></activity>
+    </application>
+
+</manifest>
