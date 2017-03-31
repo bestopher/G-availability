@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,8 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Activities.OffresActivity">
-
+    tools:context="com.senegal.nagnekoseytoo.gabavailability.Activities.ContactActivity">
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
@@ -19,20 +18,33 @@
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="150dp"
-            android:id="@+id/gab"
+            android:id="@+id/mail"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/gab"
+            android:src="@drawable/mail"
             android:layout_alignParentLeft="true"/>
 
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="150dp"
-            android:id="@+id/autre"
+            android:id="@+id/phone"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/autre"
+            android:src="@drawable/phone"
             android:layout_alignParentRight="true"/>
 
+        <!-- <Button android:id="@+id/offre"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="OFFRES"
+             android:layout_centerInParent="true"/> -->
+
+        <!-- <Button
+             android:id="@+id/apropos"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="A PROPOS"
+             android:layout_alignParentRight="true"/>-->
 
     </RelativeLayout>
 
-</LinearLayout>
+
+</RelativeLayout>

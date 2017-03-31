@@ -3,14 +3,18 @@
     package="com.senegal.nagnekoseytoo.gabavailability">
 
     <!-- on crée une permission pour notre application -->
-    <permission android:name="com.senegal.nagnekoseytoo.gabavailability.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.senegal.nagnekoseytoo.gabavailability.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
     <!-- on ajoute notre permission à la liste de permissions requises par l'API -->
-    <uses-permission android:name="com.senegal.nagnekoseytoo.gabavailability.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature"/>
+    <uses-permission
+        android:name="com.senegal.nagnekoseytoo.gabavailability.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
 
     <!-- la librairie Maps V2 nécessite openGL pour son bon fonctionnement -->
-    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -28,25 +32,29 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
 
-
     <application
+        android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@mipmap/gap1"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!-- java.lang.ClassNotFoundException: Didn't find class "com.google.firebase.FirebaseOptions" on path: -->
+
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAIAeDKD-x5vLIKbZZqFRlo83MLESGoATQ" />
-
-        <meta-data android:name="com.google.android.gms.version"
+        <meta-data
+            android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <!--<meta-data android:name="com.google.android.maps.v2.API_KEY"
+        <!--
+        <meta-data android:name="com.google.android.maps.v2.API_KEY"
             android:value="@string/api_debug_key"/>
         <meta-data android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />-->
+            android:value="@integer/google_play_services_version" />
+        -->
         <activity android:name=".Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,7 +70,9 @@
             android:label="@string/title_activity_login" />
         <activity android:name=".Activities.GabAvailabilityActivity" />
         <activity android:name=".Activities.AutreActivity" />
-        <activity android:name=".Activities.MapActivity"></activity>
+        <activity android:name=".Activities.MapActivity" />
+        <activity android:name=".Activities.ContactActivity" />
+        <activity android:name=".Activities.PhoneActivity"></activity>
     </application>
 
 </manifest>

@@ -13,18 +13,36 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         useLibrary 'org.apache.http.legacy'
+        //ajoute pour un blem de To run dex in process, the Gradle daemon needs a larger heap.
         multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    project.ext { appName = 'gabavailability_1.1' }
+                    def newName = output.outputFile.name
+                    newName = newName.replace("app-", "$project.ext.appName-")
+                    newName = newName.replace("-debug", "_release")
+                    output.outputFile = new File(output.outputFile.parent, newName)
+                }
+            }
         }
+
         debug {
             debuggable true
         }
     }
+
     productFlavors {
+    }
+//ajoute pour un blem de To run dex in process, the Gradle daemon needs a larger heap.
+    dexOptions {
+       // dexInProcess = false
+        javaMaxHeapSize "4g"
+
     }
 }
 
@@ -43,5 +61,8 @@ dependencies {
     compile 'com.google.android.gms:play-services-location:10.2.1'
     compile 'com.google.android.gms:play-services:10.2.1'
     compile 'com.google.android.gms:play-services-maps:10.2.1'
+    //ajoute pour gerer java.lang.ClassNotFoundException: Didn't find class "com.google.firebase.FirebaseOptions" on path
+    compile 'com.android.support:multidex:1.0.1'
+
 
 }

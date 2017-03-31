@@ -8,13 +8,73 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Activities.AccueilActivity">
->
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" >
 
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:id="@+id/offre"            android:layout_gravity="center_horizontal"
+            android:src="@drawable/offre"
+            android:layout_alignParentLeft="true"/>
 
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:id="@+id/contact"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/contact"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+       <!-- <Button android:id="@+id/offre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OFFRES"
+            android:layout_centerInParent="true"/> -->
+
+       <!-- <Button
+            android:id="@+id/apropos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A PROPOS"
+            android:layout_alignParentRight="true"/>-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black" >
+
+       <!-- <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:layout_centerInParent="true"/>-->
 
 
     </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        android:id="@+id/apropos"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/apropos"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="94dp" />
+
+
+</RelativeLayout>
 
 
 
