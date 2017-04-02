@@ -12,6 +12,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.senegal.nagnekoseytoo.gabavailability.R;
+import com.senegal.nagnekoseytoo.gabavailability.Services.BackgroundLocationService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +35,9 @@ public class GabAvailabilityActivity extends AppCompatActivity implements Adapte
                 Intent intent = new Intent(GabAvailabilityActivity.this, MapActivity.class);
                 //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici SecondActivite
                 startActivity(intent);
+
+                Intent geoIntent=new Intent(GabAvailabilityActivity.this,BackgroundLocationService.class);
+                startActivity(geoIntent);
 
 
             }

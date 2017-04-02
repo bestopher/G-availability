@@ -31,7 +31,18 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- voir https://developer.android.com/guide/topics/media/camera.html -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <!--  -->
+    <!--  -->
     <application
         android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
@@ -45,6 +56,9 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyAIAeDKD-x5vLIKbZZqFRlo83MLESGoATQ" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
@@ -72,7 +86,8 @@
         <activity android:name=".Activities.AutreActivity" />
         <activity android:name=".Activities.MapActivity" />
         <activity android:name=".Activities.ContactActivity" />
-        <activity android:name=".Activities.PhoneActivity"></activity>
+        <activity android:name=".Activities.PhoneActivity" />
+        <activity android:name=".Activities.TransactionActivity"></activity>
     </application>
 
 </manifest>

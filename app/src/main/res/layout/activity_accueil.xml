@@ -18,7 +18,8 @@
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="150dp"
-            android:id="@+id/offre"            android:layout_gravity="center_horizontal"
+            android:id="@+id/offre"
+            android:layout_gravity="center_horizontal"
             android:src="@drawable/offre"
             android:layout_alignParentLeft="true"/>
 

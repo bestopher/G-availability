@@ -18,12 +18,24 @@ public class OffresActivity extends AppCompatActivity {
 
         ImageButton buttonGab= (ImageButton) findViewById(R.id.gab);
         ImageButton buttonAutre= (ImageButton ) findViewById(R.id.autre);
+        ImageButton buttonTransaction=(ImageButton ) findViewById(R.id.trans);
 
         buttonGab.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(OffresActivity.this, GabAvailabilityActivity.class);
+                //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici SecondActivite
+                startActivity(intent);
+            }
+        });
+
+
+        buttonTransaction.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OffresActivity.this, TransactionActivity.class);
                 //on lance l'intent, cela a pour effet de stoper l'activité courante et lancer une autre activite ici SecondActivite
                 startActivity(intent);
             }
